@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Randomizer</title>
+    <script>
+        function randomizer() {
+            let min = document.getElementById("min_id").value;
+            let max = document.getElementById("max_id").value;
+            randomNumber = (Math.floor(Math.random() * (max - min + 1)) + 1);
+            document.getElementById('res').textContent = randomNumber;
+        }
+    </script>
+</head>
+<body>
+<div class="randomizer">
+    <div class="title">
+        <h1>RANDOMIZER</h1>
+    </div>
+    <div class="min_max">
+        <p>Min</p><br>
+        <input id="min_id" class="minmax" type="text"><br>
+        <p>Max</p><br>
+        <input id="max_id" class="minmax2" type="text"><br>
+        <br>
+        <button align="center" class="generate" id="generate" onclick="randomizer()">GENERATE</button><br>
+        <br>
+        <p>Generated number: <span id="res"></span></p>
+        <br>
+        <button onclick="window.location.href=window.location.href">EXIT</button>
+    </div>
+
+
+</div>
+</body>
+</html>

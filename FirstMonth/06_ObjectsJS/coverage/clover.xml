@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1641819966942" clover="3.2.0">
+  <project timestamp="1641819966942" name="All files">
+    <metrics statements="13" coveredstatements="13" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1" elements="18" coveredelements="18" complexity="0" loc="13" ncloc="13" packages="1" files="1" classes="1"/>
+    <file name="task_5.js" path="D:\HW\homies\06_ObjectsJS\str\task_5.js">
+      <metrics statements="13" coveredstatements="13" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <line num="4" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="6" count="2" type="stmt"/>
+      <line num="8" count="2" type="stmt"/>
+      <line num="10" count="20" type="stmt"/>
+      <line num="12" count="20" type="stmt"/>
+      <line num="13" count="20" type="stmt"/>
+      <line num="15" count="50" type="stmt"/>
+      <line num="17" count="20" type="stmt"/>
+      <line num="18" count="20" type="stmt"/>
+      <line num="19" count="20" type="cond" truecount="2" falsecount="0"/>
+      <line num="21" count="2" type="stmt"/>
+      <line num="22" count="2" type="stmt"/>
+      <line num="28" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

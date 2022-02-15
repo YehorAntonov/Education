@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<script>
+			function checkRange()
+			{
+				let max = Number.parseInt(document.getElementById('max_id').value);
+				let min = Number.parseInt(document.getElementById('min_id').value);
+				let x = Number.parseInt(document.getElementById('x_id').value);
+				if (Number.isInteger(min) === true && Number.isInteger(max) === true && min > 0 && max <= 200 && x > 0 && x < 16 && Number.isInteger(x) === true)
+				{
+					alert('Correct range!');
+				}
+				else
+				{
+					alert('Wrong range!');
+					document.getElementById('max_id').value = '';
+					document.getElementById('min_id').value = '';
+					document.getElementById('x_id').value = '';
+				}
+			}
+			function getRandomNumber()
+			{
+				let max = Number.parseInt(document.getElementById('max_id').value);
+				let min = Number.parseInt(document.getElementById('min_id').value);
+				randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+				c = 0;
+			}
+			function checkNum()
+			{
+				let num = Number.parseInt(document.getElementById('num_id').value);
+				let max = Number.parseInt(document.getElementById('max_id').value);
+				let min = Number.parseInt(document.getElementById('min_id').value);
+				let x = Number.parseInt(document.getElementById('x_id').value);
+				if (num >= min && num <= max && Number.isInteger(num) === true)
+				{
+					if (c !== x)
+					{
+						if (num === randomNumber)
+						{
+							c++;
+							alert(`Congratulations! You did it for ${c} tries`);
+						}
+						else if (num > randomNumber && (num - randomNumber) >= 10)
+						{
+							c++;
+							alert(`Cold, you can try one more time`);
+						}
+						else if (num > randomNumber && (randomNumber - num) <= 10)
+						{
+							c++;
+							alert(`Hot, you can try one more time`);
+						}
+						else if (num < randomNumber && (randomNumber - num) <= 10)
+						{
+							c++;
+							alert(`Hot, you can try one more time`);
+						}
+						else if (num < randomNumber && (randomNumber - num) >= 10)
+						{
+							c++;
+							alert(`Cold, you can try one more time`);
+						}
+
+					}
+					else
+					{
+						alert('Sorry, all tries to end!');
+						document.getElementById('max_id').value = '';
+						document.getElementById('min_id').value = '';
+						document.getElementById('x_id').value = '';
+						document.getElementById('num_id').value = '';
+					}
+				}
+				else
+				{
+					alert('Wrong range!');
+					document.getElementById('num_id').value = '';
+				}
+
+			}
+		</script>
+		<meta charset=utf-8">
+		<title> игра в случайные числа </title>
+	</head>
+	<body>
+	<div class="Container">
+		<div class="game">
+			<p align="center"> Привет! Давай сыграем в игру "Угадай число"? </p>
+			<p align="center">Суть игры предельно проста: <br> ты устанавливаешь подходящий диапазон чисел <br> и желаемое количество попыток. </p>
+			<p align="center">А дальше угадываешь число, которое я загадаю тебе</p>
+			<p align="center"> Минимальное число диапазона <input id="min_id" type="text" name="minimal"> <br> и максимальное число диапазона <input id="max_id" type="text" name="maximal"></p>
+			<p align="center"> Количество попыток: <input id="x_id" type="text" name="c"></p>
+			<p style="text-align: center"><button value="SAVE"  onclick="checkRange()">SAVE</button>
+			<p style="text-align: center"><button value="GENERATE" onclick="getRandomNumber()">GENERATE</button>
+			<p align="center"> Введите число: <input id="num_id" type="text" name="number"><button value="CHECK" onclick="checkNum()">CHECK</button></p>
+			<p style="text-align: center"> <button value="EXIT" onClick="window.location.href=window.location.href">EXIT</button>
+		</div>
+	</div>
+	</body>
+</html>

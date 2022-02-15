@@ -1,0 +1,41 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: blanchedalmond;
+  height: 100vh;
+  font-family: 'Quicksand', sans-serif;
+}
+.title {
+  font-weight: bolder;
+}
+.minmax2 {
+  &:focus {
+    outline-color: blue;
+  }
+}
+button {
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Comfortaa', cursive;
+  background-color: cornflowerblue;
+  border-radius: 5px;
+  padding: 1px;
+  margin: 4px 2px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 10px 5px 45px black;;
+    background-color: dimgray;
+  }
+}
+
+
+

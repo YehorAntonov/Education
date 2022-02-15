@@ -1,0 +1,59 @@
+#controls {
+  width: 300px;
+  font-family: 'Comfortaa', cursive;
+  font-family: 'Dongle', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+}
+.save {
+  background-color: #F6C6CE;
+  color: black;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.clear {
+  background-color: #F6C6CE;
+  color: black;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.colors button {
+  outline: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+}
+
+.red {
+  color: white;
+  cursor: pointer;
+  background-color: #FF0000;
+  border-radius: 8px;
+}
+
+.green {
+  color: black;
+  cursor: pointer;
+  background-color: #00FF00;
+  border-radius: 8px;
+}
+
+.blue {
+  color: white;
+  cursor: pointer;
+  background-color: #0000FF;
+  border-radius: 8px;
+}
+
+.yellow {
+  color: black;
+  cursor: pointer;
+  background-color: #FFFF00;
+  border-radius: 8px;
+}
+
+.black {
+  color: white;
+  cursor: pointer;
+  background-color: #000000;
+  border-radius: 8px;
+}
